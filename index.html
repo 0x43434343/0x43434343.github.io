@@ -5,7 +5,6 @@ author_profile: true
 ---
 
 
-
 <html>
 <head>
 
@@ -129,9 +128,51 @@ tbody:hover tr:hover td {
 a:hover,a:visited { color:#000; }
 
 
+.main-header{
+  background-image: url('file:///Users/z3r0/Desktop/fahad/CzgVyXd.jpg');
+}
+
+
+
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("file:///Users/z3r0/Desktop/fahad/CzgVyXd.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
 </style>
 
 
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Fahad Aid Alharbi</h1>
+    <p>Independent Vulnerability Researcher</p>
+    <a href="https://www.linkedin.com/in/fahad-aid-alharbi-950240141/"><button>Contact me </button> </a>
+  </div>
+</div>
 
 <br>
 
@@ -305,6 +346,8 @@ a:hover,a:visited { color:#000; }
 
 </head>
 </html>
+
+
 
 
 
