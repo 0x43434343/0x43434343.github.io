@@ -1,12 +1,16 @@
-
 ---
 layout: single
-title:  "Heap Unlink "
+title:  "Heap Unlink"
 date:   2020-06-14
 toc: true
 toc_label: Table
 toc_sticky: true
+classes: wide
+
 ---
+
+
+
 
 
 # Unlink exploit 
