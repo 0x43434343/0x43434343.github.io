@@ -12,8 +12,6 @@ classes: wide
 
 
 
-
-
 ## Summary 
 
 In this post , I am going to share my understanding and my own observation during my research on Windows 10 heap internal & exploitation.  This post was not reviewed by anyone , so please if you noticed that I made a mistake in this post, please email me about the issue . The post was based on a great researchers  **Wei Chen , Corelan Team and Angel Boy**  I highly recommend to read the references that I will list in this post. Lastly , the code based that used in this post was taken from Wei Chen and I modify it a little bit.

@@ -54,7 +54,7 @@ _int_free(mstate av, mchunkptr p, int have_lock)
 
 
 
-let's see what happens when we freed the first chunk ! first the **ptr** will pass throw function called public_FREe 
+let's see what happens when we freed the first chunk ! first the **ptr** will pass through function called public_FREe 
 
 ```c
 free(1) 
@@ -559,7 +559,6 @@ let's first draw a stack and see how it looks like for better understanding
 
 
 
-let's how this simple line can do :D
 
 ```
    //what important to us , where it will give us R/W 
