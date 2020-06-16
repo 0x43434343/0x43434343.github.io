@@ -2,24 +2,19 @@
 layout: single
 title:  "Heap Unlink"
 date:   2020-06-14
-toc: true
-toc_label: Table
-toc_sticky: true
+
 classes: wide
 
 ---
 
 
+# Summary 
+
+This post introduce a simple heap exploitation called unlink , where it can be useful when you are deal with GLIBC < 2.26 , the issue with the implementation mechanisms are there is no security check of previous size at unlink macro , a new version of GLIBC reduce the the impact of this issue by adding a 2 security check (previous size .. chunksize) .. => ( chunksize(P) != prev_size (next_chunk(P))//malloc.c:1405 !!! to exploit that , the attacker must leak libc address then fake a chunk structure to bypass the security check at unlink macro to get R/W! 
 
 
 
 # Unlink exploit 
-
-
-
-
-
-
 
 
 ..
@@ -312,6 +307,7 @@ gdb-peda$ x/16g 0x6020a0-0x8-0x8
 
 4115	    /* consolidate backward */
   				//p->size = 0x90
+          // it will check if the prev 
   				//Fahad this mean p p->size & 0x1
 4116	    if (!prev_inuse(p)) { // if == 0 , then will pass the check
 4117	      prevsize = p->prev_size;
