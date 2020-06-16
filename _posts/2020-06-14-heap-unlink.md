@@ -10,11 +10,11 @@ classes: wide
 
 # Summary 
 
-This post introduce a simple heap exploitation called unsafe ulink , where it can be useful when you are deal with GLIBC < 2.26 , the issue with the implementation mechanisms are there is no security check of previous size at unlink macro , a new version of GLIBC reduce the the impact of this issue by adding a 2 security check (previous size .. chunksize) .. => ( chunksize(P) != prev_size (next_chunk(P))//malloc.c:1405 !!! to exploit that , the attacker must leak libc address then fake a chunk structure to bypass the security check at unlink macro to get R/W! 
+This post introduce a simple heap exploitation called unsafe unlink , where it can be useful when you are deal with GLIBC < 2.26 , the issue with the implementation mechanisms are there is no security check of previous size at unlink macro , a new version of GLIBC reduce the the impact of this issue by adding a 2 security check (previous size .. chunksize) .. => ( chunksize(P) != prev_size (next_chunk(P))//malloc.c:1405 !!! to exploit that , the attacker must leak libc address then fake a chunk structure to bypass the security check at unlink macro to get R/W! 
 
 
 
-# unsafe ulink exploit 
+# unsafe unlink exploit 
 
 
 ..
